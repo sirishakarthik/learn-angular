@@ -1,0 +1,222 @@
+<nav>
+  <ol class="breadcrumb">
+    <li class="bread-crumb-item">
+      <a href="#">Home</a>
+    </li>
+    <li class="bread-crumb-item">
+      <a href="#">Dashboard</a>
+    </li>
+
+  </ol>
+</nav>
+<div class="row">
+  <div class="col-lg-3">
+    <div class="col-lg-12" style="background-color: aqua;">
+      {{Designation}}
+    </div>
+    <div class="col-lg-12" style="background-color: beige;">
+      {{Username}}
+    </div>
+
+    <div class="col-lg-12">
+      <ul class="list-group">
+
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          No of Team menbers
+          <span class="badge badge-primary badge-pill">{{NoOfTeamMembers}}</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Total Cost Of All projects
+          <span class="badge badge-primary badge-pill">{{TotalCostOfAllProjects}}</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Pending tasks
+          <span class="badge badge-primary badge-pill">{{PendingTasks}}</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Upcoming Projects
+          <span class="badge badge-primary badge-pill">{{UpcomingProjects}}</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Project Cost
+          <span class="badge badge-primary badge-pill">{{ProjectCost}}</span></li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Current Expenditure
+          <span class="badge badge-primary badge-pill">{{CurrentExpenditure}}</span>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Available Funds
+          <span class="badge badge-primary badge-pill">{{AvailableFunds}}</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-12 text-center pt-2 pb-2">
+      Clients
+    </div>
+    <div class="col-12">
+      <ul class="list-group list-group-flush">
+
+        <li class="list-group-item" *ngFor="let clients of Clients">{{clients}}</li>
+
+
+      </ul>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="row">
+      <div class="col-12 pb-2 pt-2" style="background-color: #e9e6e6">
+        <div class="row mt-2">
+          <div class="col-6 text-left">
+
+            <div class="dropdown">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#" *ngFor="let project of Projects ">{{project}}]</a>
+              </div>
+            </div>
+
+
+
+          </div>
+
+
+
+          <div class="col-6 text-right">
+
+            <div class="dropdown">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Dropdown
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">2019</a>
+                <a class="dropdown-item" href="#">2018</a>
+                <a class="dropdown-item" href="#">2017</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-11 pt-2 text-center " style="background-color: beige;">Project Briefing</div>
+      <div class="col-12">
+
+        <table class="table table-borderless">
+
+          <tr>
+            <td>ProjectCost</td>
+            <td>{{ProjectCost}}</td>
+          </tr>
+          <tr>
+            <td>Available Funds</td>
+            <td>{{AvailableFunds}}</td>
+
+          </tr>
+          <tr>
+            <td>CurrentExpenditure</td>
+            <td>{{CurrentExpenditure}}</td>
+          </tr>
+
+
+        </table>
+
+
+      </div>
+      <div class="col-12 text-center" style="background-color: blanchedalmond;">TeamSummary</div>
+    </div>
+    <div class="col-12">
+
+      <table class="table">
+        <tr>
+          <th>Region</th>
+          <th>TemMembers Count</th>
+          <th>Temporarily Unavailable Members</th>
+
+
+        </tr>
+        <tr *ngFor="let teammembersummary of TeamMembersSummary">
+          <td>{{teammembersummary.Region}}</td>
+          <td>{{teammembersummary.TeamMembersCount}}</td>
+          <td>{{teammembersummary.TemporarilyUnavailableMembers}}</td>
+
+
+        </tr>
+      </table>
+
+    </div>
+
+
+  </div>
+  <div class=" col-lg-3">
+    <div class="col-12 text-center" style="background-color: #e9e6e6;">
+      Team Summary
+    </div>
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              Collapsible Group Item #1
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+            officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+            wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+            excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+            you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
+              Collapsible Group Item #2
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+            officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+            wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+            excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+            you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+              aria-expanded="false" aria-controls="collapseThree">
+              Collapsible Group Item #3
+            </button>
+          </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+            officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+            wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+            excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+            you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
