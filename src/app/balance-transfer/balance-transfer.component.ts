@@ -34,9 +34,18 @@ export class BalanceTransferComponent implements OnInit {
     console.log(`calculating balances`);
 
     this.transaction.forEach((transfer: any) => {
-      if (transfer.From === 'Scott') {
-        this.ScottCurrentbal = this.ScottCurrentbal - transfer.Amount;
+      if (transfer.TO === 'Scott') {
+        this.ScottCurrentbal = this.ScottCurrentbal + transfer.Amount;
+        this.HarshaCurrentbal = this.HarshaCurrentbal - transfer.Amount;
       }
+      if (transfer.TO === 'Harsha') {
+        this.ScottCurrentbal = this.ScottCurrentbal - transfer.Amount;
+        this.HarshaCurrentbal = this.HarshaCurrentbal + transfer.Amount;
+
+
+      }
+
+
     });
   }
   balancetransaction(input: number, username: string) {

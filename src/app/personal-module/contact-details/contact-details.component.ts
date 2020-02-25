@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class ContactDetailsComponent implements OnInit {
   Country: string[];
 
-  constructor(private _router: Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.Country = ['India', 'Australia', 'America', 'Switzerland', 'Nepal'];
@@ -17,11 +17,11 @@ export class ContactDetailsComponent implements OnInit {
 
 
   next() {
-    this._router.navigateByUrl('skills');
+    this.router.navigateByUrl('skills');
   }
 
   back() {
-    this._router.navigateByUrl('personaldetails');
+    this.router.navigateByUrl('personaldetails');
   }
 
 }
