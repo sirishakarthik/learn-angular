@@ -1,11 +1,11 @@
 <form class="form-group">
   <label for="hac">Harsha Initial balance</label>
-  <input type="number" name="hac" [(ngModel)]="harshaInitBal">
+  <input type="number" name="hac" [(ngModel)]="harshaInitBal" (ngModelChange)="balancetransaction($event,'harsha')">
   Harsha Initial Balance:{{harshaInitBal}}<br>
   <label for="sac">Scott Initial balance</label>
-  <input type="number" name="sac" [(ngModel)]="ScottInitBal">
+  <input type="number" name="sac" [(ngModel)]="ScottInitBal" (ngModelChange)="balancetransaction($event,'scott')">
   Scott Initial balance:{{ScottInitBal}}<br>
-  <div class="row">
+  <div class=" row">
     <div class="col-sm-3">
       <div class="form-group">
         <label for="transcation1">From Account:</label>
