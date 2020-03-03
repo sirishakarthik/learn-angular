@@ -1,0 +1,43 @@
+<form class="form-group">
+  <label for="hac">Harsha Initial balance</label>
+  <input type="number" name="hac" [(ngModel)]="harshaInitBal" (ngModelChange)="balancetransaction($event,'harsha')">
+  Harsha Initial Balance:{{harshaInitBal}}<br>
+  <label for="sac">Scott Initial balance</label>
+  <input type="number" name="sac" [(ngModel)]="ScottInitBal" (ngModelChange)="balancetransaction($event,'scott')">
+  Scott Initial balance:{{ScottInitBal}}<br>
+  <div class=" row">
+    <div class="col-sm-3">
+      <div class="form-group">
+        <label for="transcation1">From Account:</label>
+        <select class="form-control" name="trans1" id="transaction1" [(ngModel)]="fromAcc">
+          <option>Harsha</option>
+          <option>Scott</option>
+        </select>
+        From Account: {{fromAcc}}
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group">
+        <label for="transcation1">TO Account:</label>
+        <select class="form-control" name="trans2" id="transaction2" [(ngModel)]="toAcc">
+          <option>Scott</option>
+          <option>Harsha</option>
+        </select>
+        To Account: {{toAcc}}
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="form-group">
+        <label for="amount">Amount</label> <br />
+        <input type="number" name="amount" [(ngModel)]="amount">
+      </div>
+    </div>
+    <div class="col-sm-1">
+      <br />
+      <button class="btn-primary" type="button" (click)="add()"> Add </button><br /> <br />
+    </div>
+  </div>
+  <button class="btn-primary" type="button" (click)="calculate()"> Calculate balances </button><br>
+  Harsha Current Balance: {{HarshaCurrentbal}} <br />
+  Scott Current Balance: {{ScottCurrentbal}}
+</form>

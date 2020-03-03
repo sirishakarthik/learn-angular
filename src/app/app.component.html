@@ -1,38 +1,32 @@
-<nav class="navbar navbar-expand-lg bg-success navbar-dark">
-  <a class="navbrand" href="#"> Angular Task Manager</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav">
-    <span class="navbar-toggler-icon"> </span>
-  </button>
-  <div class="collapse navbar-collapse" id="mynav">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-
-        <a class="nav-link" routerLink="dashboard">Dashboard</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="about">About</a></li>
-      <li class="nav-item">
-
-        <a class="nav-link" routerLink="project">Project</a>
-      </li>
-    </ul>
-    <form class="form-inline  my-2 my-lg-0">
-      <div class="input-group">
-        <div class="input-group prepend">
-          <span class="input-group-text " id="search">
-            <i class="fa fa-search"></i>
-
-          </span>
-        </div>
-        <input type="text" class="form-control" place-holder="search">
-      </div>
-
-      <button class="btn btn-warning" type="button">Search </button>
-    </form>
-  </div>
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Profile Wizard</a>
 </nav>
-<div class="container-fluid">
-  <h2>Welcome</h2>
+
+<div class="row">
+
+  <div class="col-sm-3">
+    <li>
+      <a routerLink="personaldetails">Personal Details</a>
+    </li>
+  </div>
+  <div class="col-sm-3">
+    <li>
+      <a routerLink="contactdetails">Contact Details</a>
+    </li>
+  </div>
+  <div class="col-sm-3">
+    <li>
+      <a routerLink="skills">Skills</a>
+    </li>
+  </div>
+  <div class="col-sm-3">
+    <li>
+      <a routerLink="workexperience">Work Experience</a>
+    </li>
+  </div>
 
 </div>
-<router-outlet></router-outlet>
+
+<router-outlet>
+</router-outlet>

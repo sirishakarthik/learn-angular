@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'siri-learn'`, () => {
+  it(`should have as title 'Wizard'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('siri-learn');
+    expect(app.title).toEqual('Wizard');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to siri-learn!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to Wizard!');
   });
 });
