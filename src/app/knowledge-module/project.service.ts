@@ -11,13 +11,9 @@ export class ProjectService {
   private url = './assets/Projects.json';
 
   constructor(private http: HttpClient) { }
+
   getProject(): Observable<[Project]> {
     return this.http.get<[Project]>(this.url);
-
-
-
-
   }
-
 
 }

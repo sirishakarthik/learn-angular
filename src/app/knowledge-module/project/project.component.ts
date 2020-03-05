@@ -11,14 +11,13 @@ import { Router } from '@angular/router';
 export class ProjectComponent implements OnInit {
   project = [];
 
-  constructor(private projservice: ProjectService, private rou: Router) { }
+  constructor(private projservice: ProjectService, private _router: Router) { }
 
   ngOnInit() {
     this.projservice.getProject().subscribe(response => this.project = response);
   }
 
-  ClickProj(department){
-this.department.id
-    
+  ClickProj(proj) {
+    this._router.navigate(['project', proj.Id]);
   }
 }
