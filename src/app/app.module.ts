@@ -6,12 +6,15 @@ import { AppComponent } from './app.component';
 import { BalanceTransferComponent } from './balance-transfer/balance-transfer.component';
 import { PersonalModule } from './personal-module/personal.module';
 import { KnowledgeModule } from './knowledge-module/knowledge.module';
-
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { EmployeeDetailsComponent } from './knowledge-module/employee-details/employee-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BalanceTransferComponent,
+    EmployeeDetailsComponent,
+
 
   ],
   imports: [
@@ -19,8 +22,8 @@ import { KnowledgeModule } from './knowledge-module/knowledge.module';
     AppRoutingModule,
     FormsModule,
     PersonalModule,
-    KnowledgeModule
-
+    KnowledgeModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

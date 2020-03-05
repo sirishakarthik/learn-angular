@@ -5,5 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class CountriesService {
 
-  constructor() { }
+  getCountries(): string[] {
+    const countrieslist = ['India', 'Australia', 'UnitedStates', 'Singapore', 'Malaysia'];
+    return countrieslist;
+
+  }
 }

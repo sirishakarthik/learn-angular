@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CountriesService } from '../services/countries.service';
 
 @Component({
   selector: 'app-contact-details',
@@ -9,10 +10,11 @@ import { Router } from '@angular/router';
 export class ContactDetailsComponent implements OnInit {
   Country: string[];
 
-  constructor(private router: Router) { }
+  constructor(private county: CountriesService, private router: Router) { }
+
 
   ngOnInit() {
-    this.Country = ['India', 'Australia', 'America', 'Switzerland', 'Nepal'];
+    this.Country = this.county.getCountries();
   }
 
 

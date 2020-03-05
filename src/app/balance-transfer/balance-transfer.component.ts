@@ -44,6 +44,7 @@ export class BalanceTransferComponent implements OnInit {
 
 
       }
+      this.transaction = [];
 
 
     });

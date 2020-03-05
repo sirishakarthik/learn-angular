@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-8 mx-auto">
+    <table class="table">
+      <th>id</th>
+      <th>name</th>
+      <th>age</th>
+      <tbody>
+        <tr (click)="ClickProj(proj)" *ngFor="let proj of project">
+          <td>{{proj.id}}</td>
+          <td> {{proj.name}}</td>
+          <td> {{proj.age}}</td>
+        </tr>
+
+
+
+      </tbody>
+
+    </table>
+
+  </div>
+</div>
